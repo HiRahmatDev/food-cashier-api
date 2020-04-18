@@ -3,6 +3,7 @@ const express = require('express');
 const App = express();
 
 const bodyParser = require('body-parser');
+const router = require('./src/router');
 const logger = require('morgan');
 const cors = require('cors');
 
@@ -11,10 +12,11 @@ App.use(bodyParser.json());
 App.use(cors());
 App.use(logger('dev'));
 
-App.use('/', (req, res) => {
+App.use('/api/v1', router);
+App.use('*', (req, res) => {
   res.json({
-    status: 'Success!',
-    msg: 'Test coba-coba'
+    status: 'Not Found!',
+    code: 404
   });
 });
 
