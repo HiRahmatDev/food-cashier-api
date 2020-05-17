@@ -43,18 +43,20 @@ module.exports = {
       counter: counter || 1,
       img_url
     }
-    res.json({
-      data
-    })
-    // menuModel.addMenu(data)
-    //   .then(result => {
-    //     res.json(result);
-    //   })
-    //   .catch((err) => {
-    //     res.json({
-    //       result: err
-    //     })
-    //   });
+    // res.json({
+    //   data
+    // })
+    menuModel.addMenu(data)
+      .then(result => {
+        result.info = 'Menu baru berhasil ditambahkan!',
+        result.status = 'success'
+        res.json(result);
+      })
+      .catch((err) => {
+        res.json({
+          result: err
+        })
+      });
   },
   deleteMenu: (req, res) => {
     console.log(req.params)
