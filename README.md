@@ -1,6 +1,6 @@
 # Food Cashier API
 
-[![Node JS](https://img.shields.io/badge/Dependencies-Express%20JS-green)](https://nodejs.org/en/)
+[![Express JS](https://img.shields.io/badge/Dependencies-Express%20JS-green)](https://expressjs.com/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/HiRahmat-Dev/food-cashier-api)
 ![GitHub contributors](https://img.shields.io/github/contributors/HiRahmat-Dev/food-cashier-api)
 ![GitHub stars](https://img.shields.io/github/stars/HiRahmat-Dev/food-cashier-api?style=social)
